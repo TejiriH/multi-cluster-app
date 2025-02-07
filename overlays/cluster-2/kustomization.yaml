@@ -1,5 +1,5 @@
 resources:
   - ../../base
-namePrefix: cluster-2-
+namePrefix: cluster-2
 patches:
   - path: deployment-patch.yaml
