@@ -1,0 +1,38 @@
+name: ArgoCD Multi-Cluster Deployment
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Kustomize
+        run: |
+          curl -sLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/latest/download/kustomize-linux-amd64
+          chmod +x kustomize
+          sudo mv kustomize /usr/local/bin/
+
+      - name: Set up ArgoCD CLI
+        run: |
+          curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+          chmod +x argocd-linux-amd64
+          sudo mv argocd-linux-amd64 /usr/local/bin/argocd
+
+      - name: Login to ArgoCD
+        run: |
+          argocd login ${{ secrets.ARGOCD_SERVER }} --username ${{ secrets.ARGOCD_USERNAME }} --password ${{ secrets.ARGOCD_PASSWORD }} --insecure
+
+      - name: Sync Application for Cluster 1
+        run: |
+          argocd app sync my-app-cluster-1
+
+      - name: Sync Application for Cluster 2
+        run: |
+          argocd app sync my-app-cluster-2
