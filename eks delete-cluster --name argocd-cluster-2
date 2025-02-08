@@ -1,0 +1,77 @@
+{
+    "cluster": {
+        "name": "argocd-cluster-2",
+        "arn": "arn:aws:eks:eu-north-1:940482437723:cluster/argocd-cluster-2",
+        "createdAt": "2025-02-07T12:06:07.273000+01:00",
+        "version": "1.30",
+        "endpoint": "https://AF61AD706085031BEAAACCD509148A82.sk1.eu-north-1.eks.amazonaws.com",
+        "roleArn": "arn:aws:iam::940482437723:role/eksctl-argocd-cluster-2-cluster-ServiceRole-TLjziTwFbBwy",
+        "resourcesVpcConfig": {
+            "subnetIds": [
+                "subnet-0bb9489176c145606",
+                "subnet-0fe19570cc6501379",
+                "subnet-0cf56513a09fadd65",
+                "subnet-04359913b8d4065d7",
+                "subnet-04c3cd9fa62362b00",
+                "subnet-01480e888a390cb60"
+            ],
+            "securityGroupIds": [
+                "sg-0466edb6d08d95ed1"
+            ],
+            "clusterSecurityGroupId": "sg-04881274d0bfd512a",
+            "vpcId": "vpc-0a915c06a2164fe06",
+            "endpointPublicAccess": true,
+            "endpointPrivateAccess": false,
+            "publicAccessCidrs": [
+                "0.0.0.0/0"
+            ]
+        },
+        "kubernetesNetworkConfig": {
+            "serviceIpv4Cidr": "10.100.0.0/16",
+            "ipFamily": "ipv4",
+            "elasticLoadBalancing": {
+                "enabled": false
+            }
+        },
+        "logging": {
+            "clusterLogging": [
+                {
+                    "types": [
+                        "api",
+                        "audit",
+                        "authenticator",
+                        "controllerManager",
+                        "scheduler"
+                    ],
+                    "enabled": false
+                }
+            ]
+        },
+        "identity": {
+            "oidc": {
+                "issuer": "https://oidc.eks.eu-north-1.amazonaws.com/id/AF61AD706085031BEAAACCD509148A82"
+            }
+        },
+        "status": "DELETING",
+        "certificateAuthority": {
+            "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSHpjRDVlZlFCczR3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBeU1EY3hNVEExTXpoYUZ3MHpOVEF5TURVeE1URXdNemhhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUNsK2NZdGtQUE85bzdTNUxHc0pmVnVvbnkwaTZGdVlBN3JZVmhHeXVUNThlbFJqQkRZR1FGdURMZ0sKaW51WnBxUjJpQmlETHBDclZ1b2RFZllBMXVkZEN3dGxGVWttbmpVdnQ2Q1B1MGRpVEhuTUp6NE80SldzTGxKTApKZ1NpaGNxcTVNbENjREdZdlpFMnpVODJnSElSOFVhZ3FvQUYvU042SEJqR1MvQkxKVDRHTFd4VFRvanZZNzZICnhvV0t5bC80Qll4Q1NoWkd2LzNOSjdlZFU2MnRUV09nYTNsOXV3SmtaWHl5VTdzY0hEblc1Qi82d251cTBES1EKcHF6R0dsNEQva1dhVU1xZ3lwTi9jbFlkR29EcEU1YUltaXNDSHJhL2hVTWViNE5HZFAwVjUxQi9JUE5tU1dXRwpwZ1NIV21YdkhKbXFVcTZRa24zeDhaS0VuZGNQQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRYjJpalZ2TkhvMk9PVENIMmJiYXFaV3JRMkR6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQWp1L0tEOEJScgp0aDVlSDMyVlZVZy9DbGpDMlVzdkhsaDZ4bE4rWDRFdGVJcjNsUXRpSUxmdlJMSmJJUjE3MWNtRm9Nc1J2UG9xCmY1K0Z4QnFhVEpmVFhXSjRiRHRKS1NqYmVQTGplaG5DSHJCc0R2T2NVQWpPYU8zU2xwMk1nOUExd1NjVER6UTAKZDNHcmhmamhCbTQyeGw0T2hqUktnRUJPelEyU1Fna050dDdueHhCSUR2R29ROVpmS1JUNmFpdEVlcFBOSjJLbQpCeHdBS3hxeUdlb2pkUHd3ZlBtVUNUeE9FOGRleGtOU1V2Y1IvRER5M3J4UWNoNFRKRnJKQ3ErY2MvSXloTE0rCjkveS91OTJHS1VJWnR6c2ZSMFdqZWpJV0RpT2pJVStGV3VwSUVIbGNRbFl4bVhMdVZTSmZzN0VPQk53QW9tOG0KZnA2c3N4a1hiMWRjCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+        },
+        "platformVersion": "eks.26",
+        "tags": {
+            "aws:cloudformation:stack-name": "eksctl-argocd-cluster-2-cluster",
+            "alpha.eksctl.io/cluster-name": "argocd-cluster-2",
+            "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-north-1:940482437723:stack/eksctl-argocd-cluster-2-cluster/782d77f0-e543-11ef-85fb-0af593884b5f",
+            "eksctl.cluster.k8s.io/v1alpha1/cluster-name": "argocd-cluster-2",
+            "alpha.eksctl.io/cluster-oidc-enabled": "false",
+            "aws:cloudformation:logical-id": "ControlPlane",
+            "alpha.eksctl.io/eksctl-version": "0.202.0",
+            "Name": "eksctl-argocd-cluster-2-cluster/ControlPlane"
+        },
+        "accessConfig": {
+            "authenticationMode": "API_AND_CONFIG_MAP"
+        },
+        "upgradePolicy": {
+            "supportType": "EXTENDED"
+        }
+    }
+}
