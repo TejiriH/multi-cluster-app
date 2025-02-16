@@ -2,18 +2,20 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kong-ingress
-  namespace: stagging
+  namespace: dev
   annotations:
-    kubernetes.io/ingress.class: "kong"
+    konghq.com/protocol: http
 spec:
+  ingressClassName: kong   # Direct traffic to Kong
   rules:
-  - host: placeholder.example.com
+  - host: a11cd0a5262b04597a6fa071a5da070b-589231859.eu-north-1.elb.amazonaws.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: nginx-service
+            name: nginx-service  # Replace with the actual service name
             port:
               number: 80
+
