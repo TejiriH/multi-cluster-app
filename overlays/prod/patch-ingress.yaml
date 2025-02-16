@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kong-ingress
+  namespace: prod
 spec:
   rules:
   - host: a11cd0a5262b04597a6fa071a5da070b-589231859.eu-north-1.elb.amazonaws.com
