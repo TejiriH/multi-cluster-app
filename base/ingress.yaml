@@ -11,7 +11,7 @@ spec:
   - host: af8a6247e173e4867ad88b9c6f9f1e86-853603990.eu-north-1.elb.amazonaws.com  # Use the LoadBalancer's IP
     http:
       paths:
-      - path: /myapp-app  # This path will route traffic to your app
+      - path: /  # This path will route traffic to your app
         pathType: Prefix
         backend:
           service:
