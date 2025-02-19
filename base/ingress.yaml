@@ -1,21 +1,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: kong-ingress
-  namespace: dev
+  name: my-app-ingress
+  namespace: default  # Use the namespace your app is deployed in
   annotations:
-    konghq.com/protocol: http
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"  # Optional: Disable SSL redirect if not using HTTPS
 spec:
-  ingressClassName: kong   # Direct traffic to Kong
+  ingressClassName: nginx
   rules:
-  - host: a11cd0a5262b04597a6fa071a5da070b-589231859.eu-north-1.elb.amazonaws.com
+  - host: af8a6247e173e4867ad88b9c6f9f1e86-853603990.eu-north-1.elb.amazonaws.com  # Use the LoadBalancer's IP
     http:
       paths:
-      - path: /
+      - path: /myapp  # This path will route traffic to your app
         pathType: Prefix
         backend:
           service:
-            name: nginx-service  # Replace with the actual service name
+            name: my-app-service  # The name of your app's service
             port:
               number: 80
-
