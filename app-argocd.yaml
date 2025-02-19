@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/tejirih/multi-cluster-app.git
     targetRevision: HEAD  # or specify a branch or commit hash
-    path: path/to/your/manifests  # optional if you have specific subdirectories
+    path: overlays/dev/  # optional if you have specific subdirectories
   project: default
   syncPolicy:
     automated:
